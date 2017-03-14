@@ -6,7 +6,7 @@ http.createServer(function(req, res){
         res.writeHead(200, {'Content-Type':'text/plain'});
         fs.createReadStream(__dirname+'/../index.html').pipe(res);
     }
-    else if(req.url==='/api'){
+    else if(req.url==='/apiv1'){
         res.writeHead(200, {'Content-Type':'application/json'});
         var responseObject = {
             firstName : 'Rajkumar',
@@ -21,4 +21,4 @@ http.createServer(function(req, res){
         res.end();
     }
 
-}).listen(4321, '127.0.0.1');
+}).listen(4324, '127.0.0.1');
