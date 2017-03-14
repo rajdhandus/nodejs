@@ -6,7 +6,7 @@ var port = process.env.PORT || 3000;
 app.use('/assets', express.static(__dirname + '/public'));
 
 app.get('/', function(req, res){
-    res.send('<html><head></head><body><h1>Hello Raj!</h1></body></html>');
+    res.send('<html><head><link href="assets/style.css type=text/css rel=stylesheet></head><body><h1>Hello Raj!</h1></body></html>');
 });
 
 app.get('/person/:id', function(req, res){
