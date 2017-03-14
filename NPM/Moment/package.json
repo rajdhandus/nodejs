@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-test-app",
+  "version": "1.0.0",
+  "description": "NodeJS Test App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajdhandus/nodejs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajdhandus/nodejs/issues"
+  },
+  "homepage": "https://github.com/rajdhandus/nodejs#readme",
+  "dependencies": {
+    "moment": "^2.17.1"
+  }
+}
