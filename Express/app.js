@@ -1,7 +1,11 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express();
 
 var port = process.env.PORT || 3000;
+
+var urlencodedParser  = bodyParser.urlencoded({ extended: false });
+var jsonParser = bodyParser.json();
 
 app.use('/assets', express.static(__dirname + '/public'));
 
@@ -19,8 +23,19 @@ app.get('/', function(req, res){
 
 app.get('/person/:id', function(req, res){
     //res.send('<html><head></head><body><h1>Hello ' + req.params.id + '</h1></body></html>');
-
     res.render('person', { ID : req.params.id });
+});
+
+app.post('/person', urlencodedParser, function(req, res){
+    res.send('Thank you');
+    console.log(req.body.firstname);
+    console.log(req.body.lastname);
+});
+
+app.post('/personjson', jsonParser, function(req, res){
+    res.send('Thank you for sending JSON Data');
+    console.log(req.body.firstname);
+    console.log(req.body.lastname);
 });
 
 app.get('/api', function(req, res){
